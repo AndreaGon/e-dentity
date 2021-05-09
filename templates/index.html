@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href="css/main.css">
+    </head>
+    <body>
+        <div class="centerDiv" style="height: 500px;">
+            <div id="title">
+                <div class="titlePage" style="float: left">
+                    <h1 style="margin-top: 120px; margin-left: 90px">Welcome to<br/>E-dentity</h1>
+                </div>
+                <div class="titlePage" style="float: right;">
+                    <img src="https://cdn.glitch.com/91dfc0c4-d741-4a32-ad6c-97b0aa3fb459%2FPalak_and_Olivias_Stuff_1.png?v=1620567935729" 
+                        alt="Graphic">
+                </div>
+            </div>
+            <div style="margin-left: 90px">
+                <div class="titleButtons">
+                    <a href="{{url_for('register')}}">Register your Digital ID</a>  
+                </div>
+                <br/>
+                <br/>
+            <div class="titleButtons">
+                <a href="{{url_for('authenticate')}}">Access your Digital ID</a>  
+            </div> 
+            </div>
+        </div>
+    </body>
+</html>
