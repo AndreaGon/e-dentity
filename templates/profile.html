@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Your Digital ID</title>
+    <link rel= "stylesheet" type= "text/css" href="css/main.css">
+  </head>
+  <body>
+        <div class="centerDiv" style="height: 650px;">
+            <h1>Confirm your Digital Profile</h1>
+            <form action="/success_reg" method="POST"> 
+              <h2>Personal Details</h2>  
+              <div class="container">
+                {%for i in data%}
+                    <div class="left">
+                        <div><label>Full Legal Name:</label></div>
+                        <div><label>Email Address:</label></div>
+                        <div><label>Phone Number:</label></div>
+                        <div><label>Date of Birth:</label></div>
+                        <div></div>
+                    </div>
+                    <div class="right">
+                        <div><input type="text" name = "fullname" value="{{i[1]}}" disabled></div>
+                        <div><input type="text" name = "email" value="{{i[3]}}" disabled></div>
+                        <div><input type="text" name = "number" value="{{i[2]}}" disabled></div>
+                        <div><input type="date" name = "dateofbirth" value="{{i[4]}}" disabled></div>
+                    </div>
+                </div>
+                <br />
+                <hr width="80%" />
+                <h2>Location of Permanent Residence</h2>
+                <div class="container">
+                    <div class="left" style="margin-left: 65px;">
+                      <div><label>Address:</label></div>
+                      <div></div>
+                    </div>
+                    <div class="right">
+                      <textarea name="address" disabled>{{i[5]}}</textarea>
+                      <br/>
+                      <div><input type="submit" id="submit" value="Done"></div>
+                    </div>                 
+                </div>
+              {%endfor%}
+            </form>          
+        </div>
+    </body>
+</html>

@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+  </head>
+  <body>
+        <div class="centerDiv" style="height: 1075px;">
+          <h1>Register Your Digital Profile</h1>
+          <form action="/save_data" method="POST">
+            <h2>Step 1: Personal Details</h2>
+            <div class="container">
+              <div class="left">
+                <div><label>Full Legal Name:</label></div>
+                <div><label>Email Address:</label></div>
+                <div><label>Phone Number:</label></div>
+                <div><label>Date of Birth:</label></div>
+              </div>
+              <div class="right">
+                <div>
+                  <input type="text" name="fullname" placeholder=" John Doe" />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    name="email"
+                    placeholder=" johndoe@johndoe.com"
+                  />
+                </div>
+                <div>
+                  <input type="text" name="number" placeholder=" 123-456-7890" />
+                </div>
+                <div>
+                  <input type="date" name="dateofbirth" placeholder=" MM/DD/YYYY" />
+                </div>
+              </div>
+            </div>
+
+            <br />
+            <hr width="80%" />
+            <h2>Step 2: Location of Permanent Residence</h2>
+            <div class="container">
+              <div class="left" style="margin-left: 65px;">
+                <div><label>Address:</label></div>
+                <br />
+              </div>
+              <div class="right">
+                <textarea
+                  name="address"
+                  placeholder=" Main Address Line, Apt/Suite/Other, City, Province, Postal Code"
+                ></textarea>
+              </div>
+            </div>
+
+            <br />
+            <hr width="80%" />
+            <h2>Step 3: Upload your Credentials Here</h2>
+            <div class="container">
+              <div class="left" style="word-wrap: break-word; width: 120px;">
+                  <p>Please insert a picture of the front and back of your ID(s).</p>
+                  <br/>
+              </div>
+              <div class="right">
+                <input type="file" id="submit1" front="Submit - Front" 
+                       style="position: relative;
+                              float: right;
+                              margin-right: 55px;
+                              background-color: var(--buttonColor);
+                              color: white !important;
+                              border-width: 0px;
+                              border-radius: 5px;
+                              padding: 15px 32px;"/> <br>
+                <input type="file" id="submit2" back="Submit - Back" 
+                       style="position: relative;
+                              float: right;
+                              margin-right: 55px;
+                              background-color: var(--buttonColor);
+                              color: white !important;
+                              border-width: 0px;
+                              border-radius: 5px;
+                              padding: 15px 32px;"/> <br>
+              </div>
+            </div>
+            <br />
+            <hr width="80%" />
+            <h2>Create a Password:</h2>
+            <div class="container">
+              <div class="left">
+                <div><label>Enter Password:</label></div>
+                <div><label>Re-enter:</label></div>
+              </div>
+              <div class="right">
+                <div><input type="password" name="password" /></div>
+                <div><input type="password" name="passwordAgain" /></div>
+              </div>
+            </div>
+            <br/>
+            <div><input type="submit" id="submit" value="Submit" /></div>
+          </form>
+        </div>
+      </body>
+</html>
